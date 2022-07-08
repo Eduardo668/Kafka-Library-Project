@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import Login from './components/login-screen/Login';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <LinearGradient 
+        style={stylesMain.bgColor}
+        start={{x:0,y:3.5}}
+        end={{x:3.8,y:0}}
+        locations={[.1,5.0]}
+        colors={['#0F18F9','#6166E0']}
+    >
+      <View>
+        <Login />
+      </View>
+    </LinearGradient>
+    
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const stylesMain = StyleSheet.create({
+    bgColor: {
+      flex: 1
+    }
+})
