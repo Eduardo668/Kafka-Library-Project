@@ -9,10 +9,10 @@ const Login = ()=>{
 
     return (
         <View style={page.loginPage}>
+
             <Text style={page.title}>Sign in</Text>
             <Form login={ getUserLogin }/>
             
-
         </View>
     )
 }   

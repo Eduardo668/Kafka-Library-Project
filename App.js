@@ -1,8 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import Login from './components/login-screen/Login';
-
+import Cadastro from './components/cadastro-screen/Cadastro'
 export default function App() {
+
+  const font_path = require('./assets/fonts/Olive Days.ttf')
+
   return (
     <LinearGradient 
         style={stylesMain.bgColor}
@@ -12,7 +15,8 @@ export default function App() {
         colors={['#0F18F9','#6166E0']}
     >
       <View>
-        <Login />
+        <Cadastro font={font_path} />
+        {/* <Login /> */}
       </View>
     </LinearGradient>
     
@@ -21,6 +25,7 @@ export default function App() {
 
 const stylesMain = StyleSheet.create({
     bgColor: {
-      flex: 1
+      width: "100%",
+      height: "100%"
     }
 })

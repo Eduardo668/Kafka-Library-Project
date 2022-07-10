@@ -40,11 +40,17 @@ const Form = ({ login })=>{
                 </Text>
             </TouchableWithoutFeedback>
 
-                <Pressable onPress={ ()=> login(user_login) }  style={styles.btnLogin}>
-                    <Text style={styles.btnLoginText}>Sign in</Text>
+                <Pressable onPress={ ()=> login(user_login) } 
+                 style={styles.btnLogin}
+                 >
+                    <Text style={styles.btnLoginText}>
+                        Sign in
+                    </Text>
                 </Pressable>
 
-            <TouchableWithoutFeedback onPress={()=> console.log("click")}>
+            <TouchableWithoutFeedback
+             onPress={()=> console.log("click")}
+             >
                 <Text style={styles.linkCadastroPage}>
                    Don't have an account?
                    Sign Up Here
@@ -63,7 +69,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#fff",
         justifyContent:"center",
         alignItems:"center",
-        top: "20%"
+        marginTop: "35%"
     },
     input: {
         padding: 15,
