@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {StyleSheet, Text, View, TextInput, Pressable, TouchableWithoutFeedback} from 'react-native';
-
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 
 const Form = ({ login })=>{
@@ -17,7 +17,11 @@ const Form = ({ login })=>{
     
 
     return(
-        <View style={styles.formContainer}>
+        <KeyboardAwareScrollView
+        resetScrollToCoords={{x:0, y: 0 }}
+        contentContainerStyle={styles.formContainer}
+        scrollEnabled={false}
+         >
 
             <TextInput 
              style={styles.input}
@@ -56,41 +60,37 @@ const Form = ({ login })=>{
                    Sign Up Here
                 </Text>
             </TouchableWithoutFeedback>   
-        </View>
+        </KeyboardAwareScrollView>
     )
 }
 
 const styles = StyleSheet.create({
     formContainer: {
-        width: 393,
-        height: 530,
-        flexDirection:"column",
-        borderRadius: 20,
-        backgroundColor: "#fff",
-        justifyContent:"center",
-        alignItems:"center",
-        marginTop: "35%"
+       backgroundColor: "#fff",
+       justifyContent:"center",
+       alignItems: "center",
+       
     },
     input: {
         padding: 15,
-        width:"70%",
+        width:350,
         fontSize:20 , 
         borderColor: 'rgba(48, 56, 246, 1.0)',
         borderWidth: 1,
-        bottom: "10%",
+        
         borderRadius: 20,
         margin: 20,
     },
     forgotYourPassword: {
         color: "#403F3F",
-        bottom: "10%"
+        margin:20
     },
     btnLogin: {
         padding: 20,
         width:150,
         backgroundColor:"#6166E0",
         borderRadius: 15,
-        bottom: "6%"
+        
         
     },
     btnLoginText: {
@@ -100,6 +100,7 @@ const styles = StyleSheet.create({
     },
     linkCadastroPage: {
         color: "#403F3F",
+        margin: 20
         
     },
 })

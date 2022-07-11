@@ -1,15 +1,16 @@
 import {StyleSheet, Text, View} from 'react-native';
-import Form from './Form';
-
-const Login = ()=>{
+import FormEmail from './FormEmail';
+import FormValidationCode from './FormValidationCode'
+const ForgotYourPass = ()=>{
     return(
         <View style={styles.container} >
             
             <View style={styles.header}>
-             <Text  style={styles.title}>Sign In</Text>
+             <Text  style={styles.title}> Recovery Password</Text>
             </View>
             <View style={styles.body} >
-                <Form />
+                {/* <FormEmail /> */}
+                <FormValidationCode/>
             </View>
         </View>
     )
@@ -43,7 +44,4 @@ const styles = StyleSheet.create({
     },
 })
 
-export default Login;
-
-
-
+export default ForgotYourPass;

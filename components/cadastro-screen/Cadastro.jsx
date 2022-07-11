@@ -2,7 +2,8 @@ import { useState } from 'react';
 import {StyleSheet, Text, View, TextInput, Pressable, TouchableWithoutFeedback, Image} from 'react-native';
 import { useFonts } from 'expo-font';
 import FormCredencias from './FormCredenciais';
-
+import FormPhotoAndUsername from './FormPhotoAndUsername'
+import FormFavoriteBook from './FormFavoriteBook';
 
 const Cadastro = ({ font })=>{
     // const [loaded] = useFonts({
@@ -19,7 +20,9 @@ const Cadastro = ({ font })=>{
               <Text  style={styles.title}>Sign Up</Text>
           </View>
           <View style={styles.body1}>
-              <FormCredencias />
+              {/* <FormCredencias /> */}
+              {/* <FormPhotoAndUsername /> */}
+              <FormFavoriteBook />
           </View>
       </View>
     )
