@@ -4,12 +4,12 @@ const BookCard = ()=>{
     return (
         <View style={styles.card}>
             <View>
-            <Text>  Harry Potter</Text>
-            <Text>Pedra filosofal</Text>
+            <Text>          Hamlet</Text>
+            <Text>Prince on denmark</Text>
             </View>
            
             <Image style={styles.bookImage} source={{
-                uri: "https://upload.wikimedia.org/wikipedia/pt/c/c1/Capa_HP1.jpg",
+                uri: "https://kbimages1-a.akamaihd.net/5fc4252b-1c4f-40ef-9975-22982c94f12c/1200/1200/False/hamlet-prince-of-denmark-23.jpg",
                 width: "100%",
                 height: "80%"
             }}  />
@@ -25,9 +25,8 @@ const styles = StyleSheet.create({
         width: 150,
         height: 200,
         backgroundColor: "#FFFFFF" ,
-        margin: 10,
-        marginBottom: 150,
         borderRadius: 10,
+        margin: 30,
         alignItems: "center",
         justifyContent: "center"
     },

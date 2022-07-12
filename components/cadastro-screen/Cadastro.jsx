@@ -4,7 +4,7 @@ import { useFonts } from 'expo-font';
 import FormCredencias from './FormCredenciais';
 import FormPhotoAndUsername from './FormPhotoAndUsername'
 import FormFavoriteBook from './FormFavoriteBook';
-
+import { LinearGradient } from 'expo-linear-gradient';
 const Cadastro = ({ font })=>{
     // const [loaded] = useFonts({
     //    OliveDays: font,
@@ -14,17 +14,25 @@ const Cadastro = ({ font })=>{
     
 
     return(
+        <LinearGradient 
+        style={styles.bgColor}
+        start={{x:0,y:3.5}}
+        end={{x:3.8,y:0}}
+        locations={[.1,5.0]}
+        colors={['#0F18F9','#6166E0']}
+    >  
       <View>
           <View style={styles.body}>
               
               <Text  style={styles.title}>Sign Up</Text>
           </View>
           <View style={styles.body1}>
-              {/* <FormCredencias /> */}
+              <FormCredencias />
               {/* <FormPhotoAndUsername /> */}
-              <FormFavoriteBook />
+              {/* <FormFavoriteBook /> */}
           </View>
       </View>
+      </LinearGradient>
     )
 
 }
@@ -57,6 +65,7 @@ const styles = StyleSheet.create({
     title:{
         color: "white", 
         fontSize: 60,
+        fontWeight: 'bold'
         
  
     },
