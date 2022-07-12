@@ -1,8 +1,9 @@
 import {StyleSheet, Text, View} from 'react-native';
 import Form from './Form';
 import { LinearGradient } from 'expo-linear-gradient';
+import { Dimensions } from 'react-native-web';
 
-const Login = ()=>{
+const Login = ({ navigation })=>{
     return(
         <LinearGradient 
         style={styles.bgColor}
@@ -14,16 +15,21 @@ const Login = ()=>{
         <View style={styles.container} >
             
             <View style={styles.header}>
+            <Text style={
+                styles.backBtn
+            } onPress={()=> navigation.navigate('Initial')} >Back</Text>
              <Text  style={styles.title}>Sign In</Text>
             </View>
             <View style={styles.body}>
                 <Form />
             </View>
+            
         </View>
         </LinearGradient>
     )
 }
 
+// let width = Dimensions.
 const styles = StyleSheet.create({
     container: {
 
@@ -52,6 +58,11 @@ const styles = StyleSheet.create({
         
  
     },
+    backBtn: {
+        position: 'absolute',
+        bottom: 200,
+        right: 350
+    }
 })
 
 export default Login;

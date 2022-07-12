@@ -67,6 +67,9 @@ const FormPhotoAndUsername = ()=>{
             
             <Pressable
                  style={styles.btnLogin}
+                 onPress={
+                    ()=> navigation.navigate('Form3')
+                 }
                  >
                     <Text style={styles.btnLoginText}>
                         Next

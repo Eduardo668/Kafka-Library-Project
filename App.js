@@ -13,6 +13,7 @@ import Account from './components/account-screen/Account';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeIcon from 'react-native-vector-icons/AntDesign'
 import News from './components/news-screen/News';
+import Initial from './components/initial-screen/Initial';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,7 +24,7 @@ export default function App() {
   
   // const navigationBarVisibility = NavigationBar.setVisibilityAsync("hidden")
   
-  const font_path = require('./assets/fonts/Olive Days.ttf')
+  // const font_path = require('./assets/fonts/Olive Days.ttf')
 
   return (
     
@@ -31,10 +32,39 @@ export default function App() {
         {/* <Cadastro font={font_path} /> */}
         {/* <Login /> */}
         {/* <ForgotYourPass /> */}
+        {/* <Initial /> */}
         
-
+      
+  
 
         <View style={stylesMain.body} >
+         
+        <NavigationContainer>
+              <Stack.Navigator>
+                   <Stack.Screen
+                  options={
+                    {
+                      headerShown: false
+                    }
+                  }
+                   name='Initial' component={Initial} />
+                   <Stack.Screen
+                  options={
+                    {
+                      headerShown: false
+                    }
+                  }
+                   name='Login' component={Login} />
+                   <Stack.Screen
+                  options={
+                    {
+                      headerShown: false
+                    }
+                  }
+                   name='Cadastro' component={ Cadastro } />
+              </Stack.Navigator>
+        </NavigationContainer>
+
          {/* <NavigationContainer>
            <Stack.Navigator
               screenOptions={{headerShown: false}}
@@ -62,7 +92,7 @@ export default function App() {
               />
            </Stack.Navigator>
          </NavigationContainer> */}
-          <NavigationContainer>
+          {/* <NavigationContainer>
             <Tab.Navigator>
                  <Tab.Screen 
                  options={{
@@ -119,7 +149,7 @@ export default function App() {
 
             
                  
-          </NavigationContainer>
+          </NavigationContainer> */}
         </View>
 
         

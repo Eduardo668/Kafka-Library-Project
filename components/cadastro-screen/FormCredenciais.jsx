@@ -3,9 +3,13 @@ import {StyleSheet, Text, View, TextInput, Pressable, TouchableWithoutFeedback} 
 import PhoneInput from 'react-native-phone-input'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
-const FormCredencias = ()=>{
+import { useNavigation } from '@react-navigation/native';
+
+
+const FormCredencias = ( props )=>{
     
     const [visibility, setVisibility] = useState("flex");
+    // const navigation = useNavigation();
     
     const stepByStep = StyleSheet.create({
         stepByStepContainer: {
@@ -60,6 +64,9 @@ const FormCredencias = ()=>{
             />
             <Pressable
                  style={styles.btnLogin}
+                 onPress={
+                    ()=> props.navigation.navigate('Form2')
+                 }
                  >
                     <Text style={styles.btnLoginText}>
                         Next

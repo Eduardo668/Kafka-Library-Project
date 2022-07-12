@@ -5,12 +5,17 @@ import FormCredencias from './FormCredenciais';
 import FormPhotoAndUsername from './FormPhotoAndUsername'
 import FormFavoriteBook from './FormFavoriteBook';
 import { LinearGradient } from 'expo-linear-gradient';
-const Cadastro = ({ font })=>{
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+
+const Cadastro = ({ navigation  })=>{
     // const [loaded] = useFonts({
     //    OliveDays: font,
     //   });
 
-    
+     const Stack = createNativeStackNavigator();
+
     
 
     return(
@@ -23,10 +28,20 @@ const Cadastro = ({ font })=>{
     >  
       <View>
           <View style={styles.body}>
-              
+          <Text style={
+                styles.backBtn
+            } onPress={()=> navigation.navigate('Initial')} >Back</Text>
               <Text  style={styles.title}>Sign Up</Text>
           </View>
           <View style={styles.body1}>
+             
+                    <Stack.Navigator>
+                        <Stack.Screen name="Form1" component={ FormCredencias }  />
+                        <Stack.Screen name="Form2" component={ FormPhotoAndUsername } />
+                        <Stack.Screen name="Form3" component={ FormFavoriteBook } />
+                    </Stack.Navigator>
+              
+ 
               <FormCredencias />
               {/* <FormPhotoAndUsername /> */}
               {/* <FormFavoriteBook /> */}
@@ -69,6 +84,11 @@ const styles = StyleSheet.create({
         
  
     },
+    backBtn: {
+        position: 'absolute',
+        bottom: 90,
+        right: 380
+    }
     
 
 })

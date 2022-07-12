@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
+        minHeight: 900
         
         
 
@@ -54,25 +55,24 @@ const styles = StyleSheet.create({
     header: {
        width: "100%",
        height: "20%",
-       backgroundColor: 'red',
+    //    backgroundColor: 'red',
        justifyContent: "center",
-       marginTop: 250
        
     },
     today_news: {
         width: "100%",
         height: "40%",
-        backgroundColor: 'purple',
+        // backgroundColor: 'purple',
         justifyContent: "center",
         alignItems: "center"
     },
     other_days: {
         width: "100%",
         height: "40%",
-        backgroundColor: 'green',
+        // backgroundColor: 'green',
         justifyContent: "center",
         alignItems: "center",
-        marginBottom: 300
+
     },
     title: {
         color: 'white',
