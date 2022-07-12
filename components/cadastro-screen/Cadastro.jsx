@@ -36,14 +36,14 @@ const Cadastro = ({ navigation  })=>{
           <View style={styles.body1}>
              
                     <Stack.Navigator>
-                        <Stack.Screen name="Form1" component={ FormCredencias }  />
+                        {/* <Stack.Screen name="Form1" component={ FormCredencias }  /> */}
                         <Stack.Screen name="Form2" component={ FormPhotoAndUsername } />
-                        <Stack.Screen name="Form3" component={ FormFavoriteBook } />
+                        {/* <Stack.Screen name="Form3" component={ FormFavoriteBook } /> */}
                     </Stack.Navigator>
               
  
-              <FormCredencias />
-              {/* <FormPhotoAndUsername /> */}
+              {/* <FormCredencias /> */}
+              <FormPhotoAndUsername />
               {/* <FormFavoriteBook /> */}
           </View>
       </View>

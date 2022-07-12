@@ -18,11 +18,9 @@ const Home = ({navigation, route})=>{
              <Text style={styles.wellcomeUser}>Welcome Usuario</Text>
              <Image style={styles.userPhoto}
              source={
-                 {uri: "http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png",
-                 width: 60,height:60
-                 
+                  require('./img/icon.png')
                 } 
-             }/>
+             />
          </View>
          <View style={styles.news}>
             <Text style={styles.dailyNewsTitle}>Daily news</Text>
@@ -87,7 +85,8 @@ const styles = StyleSheet.create({
     },
     userPhoto: {
         marginRight: 10,
-        marginTop: 8
+        marginTop: 8,
+        width:60,height:60
     },
     dailyNewsTitle: {
         color: 'white',

@@ -8,11 +8,9 @@ const BookCard = ()=>{
             <Text>Prince on denmark</Text>
             </View>
            
-            <Image style={styles.bookImage} source={{
-                uri: "https://kbimages1-a.akamaihd.net/5fc4252b-1c4f-40ef-9975-22982c94f12c/1200/1200/False/hamlet-prince-of-denmark-23.jpg",
-                width: "100%",
-                height: "80%"
-            }}  />
+            <Image style={styles.bookImage} source={
+                require('./img/cardImg.jpg')
+            }  />
             <Pressable style={styles.buttonView}>
                 <Text style={styles.buttonViewText}>View</Text>
             </Pressable>
@@ -26,14 +24,16 @@ const styles = StyleSheet.create({
         height: 200,
         backgroundColor: "#FFFFFF" ,
         borderRadius: 10,
-        margin: 30,
+        margin: 27,
         alignItems: "center",
         justifyContent: "center"
     },
     bookImage: {
         borderBottomLeftRadius: 10,
         borderBottomRightRadius: 10,
-        marginTop: 1
+        marginTop: 1,
+        width: "100%",
+        height: "80%"
 
     },
     buttonView: {

@@ -8,11 +8,9 @@ const BookCard = ()=>{
             <Text>Pedra filosofal</Text>
             </View>
            
-            <Image style={styles.bookImage} source={{
-                uri: "https://upload.wikimedia.org/wikipedia/pt/c/c1/Capa_HP1.jpg",
-                width: "100%",
-                height: "80%"
-            }}  />
+            <Image style={styles.bookImage} source={
+                require('./img/cardImg.jpg')
+            }  />
             <Pressable style={styles.buttonView}>
                 <Text style={styles.buttonViewText}>View</Text>
             </Pressable>
@@ -34,7 +32,9 @@ const styles = StyleSheet.create({
     bookImage: {
         borderBottomLeftRadius: 10,
         borderBottomRightRadius: 10,
-        marginTop: 1
+        marginTop: 1,
+        width: "100%",
+        height: "80%"
 
     },
     buttonView: {

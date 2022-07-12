@@ -15,7 +15,7 @@ const UserData = ()=>{
            </Text>
            <View style={styles.line}></View>
            <Text  style={styles.textUserData}>
-               Book Style   Adventure, Fantasy
+               Book Style : Adventure, Fantasy
            </Text>
            <View style={styles.line}></View>
        </View>

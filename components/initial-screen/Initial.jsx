@@ -13,12 +13,13 @@ const Initial = ({ navigation })=> {
     >  
       <View>
              <View style={styles.top} >
-                <Image
-                   source={ {
-                    uri: "https://media.discordapp.net/attachments/986405178880192533/995417174770466937/bookshelf_1.png",
-                    width: 100,
-                    height: 100
-                } }
+                    <Image style={{
+                        width: 100,
+                        height: 100
+                    }} 
+                   source={ 
+                    require('./img/logo.png')
+                   }
                 />
                     <Text style={styles.title}>Kafka Library</Text>
              </View>

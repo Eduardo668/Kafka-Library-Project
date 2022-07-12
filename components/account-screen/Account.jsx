@@ -15,8 +15,7 @@ const Account = ()=> {
              <View style={styles.header}>
              <Image
                   style={styles.userImage} 
-                  source={{uri: "http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png",
-                   width:200,height:200 }}  />
+                   source={require('./img/icon.png')}  />
             
              </View>
              <View style={styles.body} >
@@ -67,7 +66,9 @@ const styles = StyleSheet.create({
       },
       userImage: {
         backgroundColor: "#000",
-        borderRadius: 300
+        borderRadius: 300,
+        width: 200,
+        height: 200
      },
      usernameText: {
         fontSize: 35,

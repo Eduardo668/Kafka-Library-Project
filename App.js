@@ -39,7 +39,7 @@ export default function App() {
 
         <View style={stylesMain.body} >
          
-        <NavigationContainer>
+        {/* <NavigationContainer>
               <Stack.Navigator>
                    <Stack.Screen
                   options={
@@ -63,36 +63,10 @@ export default function App() {
                   }
                    name='Cadastro' component={ Cadastro } />
               </Stack.Navigator>
-        </NavigationContainer>
+        </NavigationContainer> */}
 
-         {/* <NavigationContainer>
-           <Stack.Navigator
-              screenOptions={{headerShown: false}}
-           >
-              <Stack.Screen
-               options={{headerShown: false, }} 
-              name='Home' component={Home}  />
-              <Stack.Screen
-               options={{
-                 headerShown: false
-               }}
-               name="Store" component={Store}
-              />
-              <Stack.Screen 
-                  options={{headerShown: false}} 
-                  name="Account"
-                  component={Account}  
-            
-              />
-              <Stack.Screen 
-                  options={{headerShown: false}} 
-                  name="Cadastro"
-                  component={Cadastro}  
-            
-              />
-           </Stack.Navigator>
-         </NavigationContainer> */}
-          {/* <NavigationContainer>
+       
+          <NavigationContainer>
             <Tab.Navigator>
                  <Tab.Screen 
                  options={{
@@ -149,7 +123,7 @@ export default function App() {
 
             
                  
-          </NavigationContainer> */}
+          </NavigationContainer>
         </View>
 
         
